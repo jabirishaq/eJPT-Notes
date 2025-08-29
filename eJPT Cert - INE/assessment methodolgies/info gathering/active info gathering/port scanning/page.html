@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Port Scanning</title>
+</head><body><span style="font-size: 33pt">Scanning the services that are on Open Ports<br/>
+<br/>
+Enumerate the much information for the ports that are open using NMAP<br/>
+<br/>
+-- nmap -pn &lt;ip address&gt;<br/>
+<br/>
+-pn is for the systems like windows that blocks the pings and it wiont be able to do scanning.<br/>
+<br/>
+-- nmap -pn &lt;ip address&gt;<br/>
+<br/>
+this is for the lots of lots of ports and it takes time<br/>
+<br/>
+to break it down, we need to specify the ports in the command like,<br/>
+<br/>
+-- nmap -pn -p 80,443,3389 &lt;ip address&gt; <br/>
+<br/>
+it will return the port 80,443,3389(RDP Port)<br/>
+<br/>
+</span><span style="font-size: 33pt">or you can add a range like</span><br/>
+<br/>
+<span style="font-size: 33pt">-- nmap -pn -p 1-35040 &lt;ip address&gt;<br/>
+<br/>
+or can be used to scan the Fastest way<br/>
+<br/>
+-- nmap -pn -F &lt;ip address&gt; <br/>
+<br/>
+For the UDP Search:<br/>
+<br/>
+-- nmap -pn -sU &lt;ip address&gt; <br/>
+<br/>
+Can increase the verbosity<br/>
+<br/>
+-- nmap -pn -sU &lt;ip address&gt; -v<br/>
+<br/>
+For the scan for the services it <br/>
+<br/>
+-- nmap -pn -F -sV &lt;ip address&gt; <br/>
+<br/>
+For the scan of the windows version<br/>
+<br/>
+-- nmap -pn -F -sV -O &lt;ip address&gt; <br/>
+<br/>
+For the scripts and nmap scripts on the target<br/>
+<br/>
+-- nmap -pn -F -sV -O -sC &lt;ip address&gt; <br/>
+<br/>
+For Fastest of the scans we can do it<br/>
+<br/>
+-- nmap -T&lt;1-5&gt; -pn -F -sV -O -sC &lt;ip address&gt; <br/>
+<br/>
+keep in mind we cant use T5 it is fastest way because on production it will send the <br/>
+large number of packets and web servers can lead to Denial Of Service.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</span></body></html>

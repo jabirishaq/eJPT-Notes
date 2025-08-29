@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Port Scanning with NMAP</title>
+</head><body><b><u><span style="font-size: 30pt">Port Scanning for the Open Ports:<br/>
+<br/>
+<br/>
+</span></u></b><span style="font-size: 30pt">nmap 10.10.44.4<br/>
+<br/>
+nmap -Pn 10.10.44.4 -- not Ping<br/>
+<br/>
+nmap -Pn -F 10.10.44.4 -- Faster<br/>
+<br/>
+nmap -Pn -p 80 10.10.44.4 --open ports<br/>
+<br/>
+nmap -Pn -p 80 10.10.44.4 -- more than 1 open ports<br/>
+<br/>
+<span style="background-color: #ffa300"><u><b>important<br/>
+</b></u></span>if it is filtered &nbsp;State, it means there is windows firewall<br/>
+if it is Closed, windows firewall isnt active or there are not rules<br/>
+<br/>
+For a fast scanning of TCP ports, use all TCP ports as <span style="background-color: #ff0000">65535<br/>
+</span><span style="background-color: #ff0000"><br/>
+</span>nmap -T4 -Pn -p- 10.10.44.4 -- -p- means all ports to scan<br/>
+<br/>
+nmap -T4 -Pn -sS -F 10.10.44.4 -- stealthier scan, top100 ports to scan <span style="background-color: #ff0000"><br/>
+</span><span style="background-color: #ff0000"><br/>
+</span><br/>
+<br/>
+<u><b><br/>
+</b></u><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</span></body></html>

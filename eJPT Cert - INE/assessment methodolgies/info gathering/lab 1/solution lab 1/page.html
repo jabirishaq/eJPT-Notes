@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Solution Lab 1</title>
+</head><body><ul><span style="font-size: 20pt"><li><b>Flag 1:</b>&nbsp;This tells search engines what to and what not to avoid.</li>
+<li style="list-style-type: none"><ul><li>use /robots.txt</li>
+</ul>
+</li>
+<li><b>Flag 2:</b>&nbsp;What website is running on the target, and what is its version?</li>
+<li style="list-style-type: none"><ul><li>whatweb works like a magic</li>
+</ul>
+</li>
+<li><b>Flag 3:</b>&nbsp;Directory browsing might reveal where files are stored.</li>
+</span><li style="list-style-type: none"><ul><span style="font-size: 20pt"><li>Directory Enumeration is required - First of all it is a wordpress site so predict the folder structure, the wp-content/uploads in the url will work like a charm</li>
+<li>You can use a ool - GoBuster</li>
+</span><li><span style="font-size: 20pt">Commands <i><u>gobuster dir -u http://target.ine.local -w /usr/share/dirbuster/wordlists/directory-list-lowercase-2.3-medium.txt</u></i></span><i><u>&nbsp; </u></i>&nbsp;</li>
+</ul>
+</li>
+<span style="font-size: 20pt"><li><b>Flag 4:</b>&nbsp;An overlooked backup file in the webroot can be problematic if it reveals sensitive configuration details.</li>
+<li style="list-style-type: none"><ul><li>in the URL use /wp-backup.bak</li>
+</ul>
+</li>
+<li><b>Flag 5:</b>&nbsp;Certain files may reveal something interesting when mirrored.</li>
+<li style="list-style-type: none"><ul><li>Use Httrack command to mirror the site and an xml file contains the FLAG5</li>
+</ul>
+</li>
+</span></ul>
+<span style="font-size: 20pt"><br/>
+https://systemweakness.com/assessment-methodologies-information-gathering-ctf-1-e2d61b445a78<ul><li></li>
+</ul>
+</span><ul><li style="list-style-type: none"><ul><span style="font-size: 20pt"><li><img src="image.png" /></li>
+</span></ul>
+</li>
+</ul>
+</body></html>

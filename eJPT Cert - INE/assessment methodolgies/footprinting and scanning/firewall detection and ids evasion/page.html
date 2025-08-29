@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Firewall detection and IDS Evasion</title>
+</head><body><span style="font-size: 29pt">Firewall detection and Intrusion Detection System Evasion<br/>
+<br/>
+nmap -Pn -sS -F demo.ine.local<br/>
+<br/>
+this returns the ports that are filtered or not if it says filered then it means there is firewall if says closed it means no firewall is configured<br/>
+<br/>
+So<br/>
+<br/>
+nmap -Pn -sA -p445,3389 demo.ine.local -- -sA is the shortcut for -sV and -O service versions + OS version<br/>
+<img src="image.png" /><br/>
+<br/>
+here we know the firewall is applied.<br/>
+<br/>
+NMAP help for FW and IDS Evasion and Spoofing:<br/>
+<br/>
+The simple scan<br/>
+nmap -Pn -sS -sV -F demo.ine.local<br/>
+<br/>
+Fragmentaion of packets<br/>
+nmap -Pn -sS -sV -p80,445,3389 -f demo.ine.local<br/>
+<br/>
+<b><u>evading the IDS</u></b><br/>
+nmap -Pn -sS -sV -p445,3389 -f --data-length 200 -D &lt;one or more ips from ifconfig eth1&gt; &lt;target IP&gt;<br/>
+<br/>
+nmap -Pn -sS -sV -p445,3389 -f --data-length 200 -g 53 -D 10.10.36.3,10.10.36.4 demo.ine.local<br/>
+<br/>
+-D is used to decoy the ip addreses and from wireshark it is confirmed that it is working fine<br/>
+<br/>
+-g is used to decoy the port of the source<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+dfg<br/>
+dfg<br/>
+dfg<br/>
+dfg<br/>
+dfg</span></body></html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scripting Engine NSE</title>
+</head><body><span style="font-size: 28pt">Nmap Scripting Engine NSEsd<br/>
+<br/>
+***Main Focus is on .Net technologies and MS SQL, check below<br/>
+<br/>
+Intro: it comes huge library of scripts under<br/>
+ls -al /usr/share/nmap/scripts<br/>
+<br/>
+they are easier to understand<br/>
+<br/>
+need to search for http<br/>
+ls -al /usr/share/nmap/scripts | grep -e "http"<br/>
+<br/>
+category are made:<br/>
+1. discovery<br/>
+2. exploitation<br/>
+3. brute force<br/>
+4. safe<br/>
+5. auth<br/>
+6. broadcast<br/>
+7. default --- important<br/>
+<br/>
+<br/>
+each address the problems<br/>
+<br/>
+for example<br/>
+nmap -sS -sV -sC -p- -T4 &lt;IP Address&gt; -- -sS for port scanning<br/>
+<br/>
+if there is a databases services discovered, e.g = mongo db<br/>
+<br/>
+ls -al /usr/share/nmap/scripts | grep -e "mongodb"<br/>
+<br/>
+it will list the scripts<br/>
+<br/>
+so we need to check the scripts what categories are lying in<br/>
+<br/>
+so nmap command will be:<br/>
+nmap --script-help=&lt;script-name&gt;<br/>
+<br/>
+nmap -sS -sV --script=&lt;addthescriptname&gt; -p- -T4 &lt;IP Address&gt;<br/>
+<br/>
+in this command --script=the command<br/>
+<br/>
+foreaxmple is that i found that "ms" comes in the scripts list so i found ms-sql-info.nse so lets use it<br/>
+<br/>
+<span style="background-color: #ff0000">nmap -sS -sV --script=ms-sql-info -p- -T4 &lt;IP Address&gt;</span><br/>
+<br/>
+it will be as follows<br/>
+<img src="image.png" /><br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</span></body></html>

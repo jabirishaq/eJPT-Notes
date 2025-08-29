@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DNS Zone Transfer</title>
+</head><body><b><span style="font-size: 31pt">Active Information Gathering<br/>
+<br/>
+DNS Zone Transfer<br/>
+<br/>
+</span></b><span style="font-size: 31pt">This is a web server vulnerability that is often left that by copying the host name files from a primary server to secondary and in between there the pentesters find a way to sneak in.<b><br/>
+</b><b><br/>
+</b>What is DNS?<br/>
+Domain Name System, a protocol used to resolve domain names/hostnames to IP Addresses.<br/>
+<br/>
+DNS Records.<br/>
+<br/>
+DNS Interrogation:<br/>
+<br/>
+In active recon, we use this to dip deep the ip addresses and stuff that is not publically available.<br/>
+<br/>
+To dig deeper, here comes DNS Zone Transfer.<br/>
+<br/>
+1. dnsenum -- dsenum zonetransfer.me<br/>
+2. dig -- dig axfr @&lt;ServerName&gt; ZoneTransfer.me<br/>
+<br/>
+there is this tool called Fierce that is used to scan locate non-contagious IP spave and hostnames against specified domains.<br/>
+<br/>
+Fierce:<br/>
+<br/>
+Brute force with fierce:<br/>
+&nbsp;fierce -dns zonetransfer.me<br/>
+<br/>
+this returns that the Zone Transfer is on for the web servers<br/>
+<br/>
+<br/>
+</span>&nbsp; <span style="font-size: 31pt"><br/>
+</span><span style="font-size: 31pt"><br/>
+<br/>
+<br/>
+<br/>
+</span></body></html>

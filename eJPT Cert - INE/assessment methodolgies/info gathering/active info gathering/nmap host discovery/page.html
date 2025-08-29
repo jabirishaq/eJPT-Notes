@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>NMAP Host Discovery</title>
+</head><body><span style="font-size: 32pt">This is to discover the rest of the network is shared with the devices<br/>
+<br/>
+--ping a s<br/>
+<br/>
+reveals the devices on the network<br/>
+<br/>
+1. NMAP<br/>
+<br/>
+-- sudo nmap -sn 172.31.98.0/24<br/>
+<br/>
+it will reveal the devices that are up this time<br/>
+<br/>
+2. netdiscover<br/>
+it sends ARP requests which essentially resolve the MAC Addresses to IP Addresses, and vice versa<br/>
+<br/>
+-- sudo netdiscover -i eth0 -r 172.16.23.0/16<br/>
+</span></body></html>

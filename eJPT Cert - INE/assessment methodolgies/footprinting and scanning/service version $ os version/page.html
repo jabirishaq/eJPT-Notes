@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>service Version $ OS version</title>
+</head><body><span style="font-size: 29pt">service Version $ OS version<br/>
+Steps to discover<br/>
+1. ifconfig<br/>
+it reveals that eth1 ip<br/>
+subnet in eth1 reveals how larger is the network<br/>
+<br/>
+2. ip a s command<br/>
+the subnet range for eth1 will be there<br/>
+<br/>
+3. nmap -sn &lt;eth1 ip address&gt;/24 -- the size of network<br/>
+<br/>
+4. if the ports are closed, usually it shows all are closed.<br/>
+<br/>
+so we use the command <br/>
+<br/>
+nmap -T4 -sS -p- &lt;ip&gt; -- to scan all ports<br/>
+<br/>
+it will reveal all ports.<br/>
+<br/>
+5. Now comes the service version detection scan<br/>
+<br/>
+nmap -T4 -sS -sV -p- &lt;ip&gt;<br/>
+<br/>
+this will return the services and the version too.<br/>
+<br/>
+now note these Service+Version columns<br/>
+start on the vulnerabilities and misconfigurations are done by the developers etc<br/>
+<br/>
+6. nmap -T4 -sS -sV --version-intensity 8 -O --osscan-guess -p- &lt;ip&gt;<br/>
+<br/>
+This enables to search operating system<br/>
+also it guesses the os<br/>
+<br/>
+version intesnity ranges till 9<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</span></body></html>

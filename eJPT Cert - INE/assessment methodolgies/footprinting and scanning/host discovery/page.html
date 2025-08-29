@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Host Discovery</title>
+</head><body>Network Discovery<br/>
+<br/>
+<span style="font-size: 30pt">Host Discovery Technics<br/>
+<br/>
+it is a crucial phase to identify live hosts on a network<br/>
+<br/>
+1. Ping Sweeps (ICMP Echo requests)<br/>
+2. ARP (Address Resolution Protocol) Scanning - Local Network<br/>
+3. TCP SYN PING (Half-Open Scan) if host is live it will respond with SYN-ACK<br/>
+4. UDP Ping<br/>
+5. TCP ACK Ping<br/>
+6. SYN-ACK (Sends SYN-ACK packets)<br/>
+<br/>
+<br/>
+Considerations:<br/>
+ICMP Ping: <br/>
+Pros: Widely supported and quick method identifying live hosts.<br/>
+<br/>
+Cons: windows blocks it, IDS can detect it very easily<br/>
+<br/>
+<br/>
+TCP SYN Ping:<br/>
+Pros: stealthier than ICMP and may bypass firewalls that allows outbound connections<br/>
+<br/>
+Cons: Some hosts may not respond to TCP SYN_ACK requests and the results can be affected by firewalls and security devices.<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</span><br/>
+</body></html>

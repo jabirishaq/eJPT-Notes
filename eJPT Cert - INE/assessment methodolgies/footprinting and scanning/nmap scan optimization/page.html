@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Nmap Scan Optimization</title>
+</head><body><span style="font-size: 23pt">Nmap Scan Optimization<br/>
+<br/>
+to increase the NMAP Scan performance becasue if the speed is slow it will make less suspicious becasue usually the arrage of packets are coming as we saw in the wireshark<br/>
+<br/>
+nmap -Pn -sS -F --host-timeout 30s 10.10.36.5 <br/>
+<br/>
+it is to delay in between the probs<br/>
+<br/>
+30s is for the largest networks, dont use smaller numbers<br/>
+<br/>
+Scan Delay<br/>
+nmap -Pn -sS -F --scan-delay 15s 10.10.36.5<br/>
+<br/>
+timing template<br/>
+T&lt;0-5&gt;<br/>
+<br/>
+T1 sneaky<br/>
+T2 stealthy<br/>
+T3<br/>
+T4 Aggressive</span></body></html>

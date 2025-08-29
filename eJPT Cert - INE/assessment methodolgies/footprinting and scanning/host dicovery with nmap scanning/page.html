@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Host Dicovery with NMAP Scanning</title>
+</head><body><span style="font-size: 26pt"><b><u>Host Dicovery with NMAP Scanning:</u></b><br/>
+<br/>
+NMAP Requires SUDO or Root privileges<br/>
+<br/>
+NMAP for the local network<br/>
+<br/>
+include -sn to avoid the port scanner it takes a lots of time<br/>
+nmap -sn -PS3389,80,443 10.10.44.5<br/>
+<br/>
+TCP ACK Packets to the Ports 80<br/>
+ICMP Echo requests only<br/>
+<br/>
+nmap -sn -PE &lt;HostIPAddressHere&gt; --send-ip<br/>
+<br/>
+the professional nmap command is<br/>
+<br/>
+nmap -sn -v -T4 &lt;HostIPAddressHere&gt;<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</span></body></html>

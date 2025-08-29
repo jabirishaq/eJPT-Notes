@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ping Sweeps</title>
+</head><body><span style="font-size: 30pt">Ping Sweeps<br/>
+is a network scanning technique used to discover live hosts within the specific IP Address range on a network<br/>
+<br/>
+Basic idea is to send a series of ICMP Echo Request Messages to a range of ip addresses and observer the responses to determine which addresses are active or reachable<br/>
+<br/>
+<span style="background-color: #ff0000">The windows Hosts will block by default</span><br/>
+<br/>
+<br/>
+Ping command is also the working<br/>
+fping -a -g 10.10.36.0/24 is utilizing the ICMP<br/>
+<br/>
+-a the alive hosts<br/>
+-S source IP<br/>
+-A the address of the hosts<br/>
+-g target list<br/>
+<br/>
+a little hack<br/>
+fping -a -g 10.10.36.0/24 2&gt;/dev/null<br/>
+<br/>
+so at the end check why hosts are not live<br/>
+ping -a demo.ine.local - it is blocking the ping most probably it is Window Server<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</span></body></html>
