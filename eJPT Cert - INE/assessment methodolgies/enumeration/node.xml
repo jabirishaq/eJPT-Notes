@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>title</key><string>Enumeration</string>
+  <key>nodeid</key><string>b5e1d007-5055-4794-844a-6d16f170800b</string>
+  <key>modified_time</key><integer>1756483399</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>application/x-notebook-dir</string>
+  <key>created_time</key><integer>1756483399</integer>
+  <key>order</key><integer>0</integer>
+</dict>
+</node>

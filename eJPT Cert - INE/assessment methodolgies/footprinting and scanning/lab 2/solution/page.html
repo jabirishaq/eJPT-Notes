@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Solution</title>
+</head><body><span style="font-size: 29pt">Tools to use:<br/>
+<br/>
+NMAP<br/>
+FTP<br/>
+MySQL<br/>
+<br/>
+</span><b>Flag 1</b>: The server proudly announces its identity in every response. Look closely; you might find something unusual. &nbsp;<span style="font-size: 29pt"><br/>
+</span><br/>
+nmap -Pn -sV target.ine.local<br/>
+<br/>
+it reveals the services and the flag lies in their<br/>
+<br/>
+FLAG1_05ca0c0cf1ce4dba8a9a820673629a94<br/>
+<br/>
+<b>Flag 2</b>: The gatekeeper's instructions often reveal what should remain unseen. Don't forget to read between the lines.<br/>
+<br/>
+go to target.ine.local/robot.txt<br/>
+<br/>
+under disallow<br/>
+<br/>
+it says /secret-info/<br/>
+<br/>
+so navigate to &nbsp; target.ine.local/secret-info/ it will give flag.txt<br/>
+<br/>
+so on target.ine.local/secret-info/flag.txt gives you the flag<br/>
+<br/>
+FLAG2_20fdb1888c124eb5a91240ee09941f47<br/>
+<br/>
+<b>Flag 3</b>: Anonymous access sometimes leads to forgotten treasures. Connect and explore the directory; you might stumble upon something valuable. &nbsp;<br/>
+<br/>
+use command<br/>
+<br/>
+nmap -ss -sV --script=ftp-anon -p- T4 target.ine.local<br/>
+<br/>
+this will ru the ftp anonymous login script on the target<br/>
+<br/>
+and will share the output<br/>
+<br/>
+the output says it allows for the anonymous login<br/>
+<br/>
+so use<br/>
+<br/>
+ftp target.ine.local<br/>
+<br/>
+this get you in the ft server<br/>
+<br/>
+give user name/ password as anonymous<br/>
+<br/>
+it will successfully logs in<br/>
+<br/>
+then from out put of the script you know there are 2 files flag.txt and creds.txt are palced<br/>
+<br/>
+use get creds.tx and flag.txt respectively and it will download the files to the source<br/>
+<br/>
+use cat flag.txt it contains the flag 3<br/>
+<br/>
+FLAG3_e845c9f47b944af4adf928b0de147ac1<br/>
+<br/>
+<br/>
+<b>Flag 4</b>: A well-named database can be quite revealing. Peek at the configurations to discover the hidden treasure. &nbsp;<br/>
+<br/>
+cat creds.txt<br/>
+<br/>
+db-admin: password@123<br/>
+<br/>
+use the command: mysql -h target.ine.local -u db-admin -p<br/>
+<br/>
+this wil prompt the password add password as password@123<br/>
+<br/>
+then run the command <br/>
+<br/>
+show databases;<br/>
+<br/>
+FLAG4_1f7e4a1c93504678b5818bf544ef9d1e<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</body></html>
