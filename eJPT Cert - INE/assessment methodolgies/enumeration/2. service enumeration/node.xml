@@ -3,14 +3,14 @@
 <version>6</version>
 <dict>
   <key>expanded</key><true/>
-  <key>title</key><string>Active Info Gathering</string>
-  <key>nodeid</key><string>6ccf077b-0f3f-42e9-87de-540f254f4e21</string>
-  <key>modified_time</key><integer>1755417911</integer>
+  <key>title</key><string>2. Service Enumeration</string>
+  <key>nodeid</key><string>d05c2fae-17e0-40c0-8e8f-c4068173c585</string>
+  <key>modified_time</key><integer>1756704286</integer>
   <key>version</key><integer>6</integer>
   <key>content_type</key><string>application/x-notebook-dir</string>
-  <key>created_time</key><integer>1755417911</integer>
+  <key>created_time</key><integer>1756704286</integer>
   <key>info_sort_dir</key><integer>1</integer>
-  <key>order</key><integer>1</integer>
+  <key>order</key><integer>0</integer>
   <key>info_sort</key><string>order</string>
 </dict>
 </node>

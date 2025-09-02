@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SSH ENumeration</title>
+</head><body>secure shell is remote administration protocol that offers encryption protocol that offers encryption and is the successor to Telnet<br/>
+<br/>
+used fro rdp accses<br/>
+<br/>
+ssh uses TCP ports 22<br/>
+<br/>
+First take out the ssh_version<br/>
+<br/>
+hit run<br/>
+<br/>
+it will reveal the server version SSH-2.0-OpenSSH_7.9p1 Ubuntu-10<br/>
+<br/>
+search type:auxiliary name:ssh<br/>
+<br/>
+use the scanner/ssh/ssh_login<br/>
+<br/>
+it needs to brute force<br/>
+<br/>
+use the password and username word lists<br/>
+<br/>
+it will highlight the SSH users like sysadmin<br/>
+<img src="image.png" /><br/>
+<br/>
+in order to go into this ssh<br/>
+<br/>
+ssh sysadmin@&lt;target_ip&gt;<br/>
+give the password<br/>
+<br/>
+go to directory /home/sysadmin<br/>
+<br/>
+cat /flag<br/>
+<br/>
+here is your flag for the lab<br/>
+<br/>
+eb09cc6f1cd72756da145892892fbf5a</body></html>

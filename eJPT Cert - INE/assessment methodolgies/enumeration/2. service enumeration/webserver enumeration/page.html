@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WebServer Enumeration</title>
+</head><body>start the service<br/>
+use auxiliary/scanner/http/http_version<br/>
+<br/>
+show options and there is a SSL that is required and if that is SSL true, set it to false<br/>
+<br/>
+hit run<br/>
+<br/>
+now the http_version is here<br/>
+<br/>
+next step is to go for http header modules <br/>
+<br/>
+use auxiliary/scanner/http/http_header<br/>
+<br/>
+check the options and it needs to run<br/>
+<br/>
+<img src="image.png" /><br/>
+<br/>
+Hidden Directories:<br/>
+<br/>
+robots.txt file for apache server<br/>
+<br/>
+use auxiliary/scanner/http/robots_txt<br/>
+<br/>
+run<br/>
+<br/>
+it gives the list of robots.txt file content<br/>
+<br/>
+curl &lt;target_ip&gt;/data/<br/>
+<br/>
+it will list the data file<br/>
+<br/>
+curl &lt;target_ip&gt;/secure/<br/>
+<br/>
+this is unauthorized or the credentials supplied are wrong means it is secure<br/>
+<br/>
+now apply the brute force <br/>
+<br/>
+directory brute force is in row now<br/>
+<br/>
+use auxiliary/scanner/http/dir_scanner<br/>
+<br/>
+hit run and it will revael the file<br/>
+<br/>
+now file brute force<br/>
+<br/>
+use auxiliary/scanner/http/files_dir<br/>
+<br/>
+we can add the filter for the type of the files like php etc<br/>
+<br/>
+hit run and it will enumerat the files<br/>
+<br/>
+now we found /secure/ directory so we will enumerate it further<br/>
+<br/>
+use auxiliary/scanner/http/http_login<br/>
+<br/>
+show options gives you the UserPass_FILE so we will not use it as we have already in pass_file and user_file added from metasploit framework<br/>
+<br/>
+so we set AuthURI to /secure/<br/>
+<br/>
+then we run and it will brute force and gives a user or users that are valid and can access<br/>
+<br/>
+bob:123321<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+</body></html>

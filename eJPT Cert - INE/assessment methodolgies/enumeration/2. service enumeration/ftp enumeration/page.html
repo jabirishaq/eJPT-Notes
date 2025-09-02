@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>FTP Enumeration</title>
+</head><body>FTP is file transfer protocol<br/>
+<br/>
+it is also frequesntly used as a means of transferring files to and from directory of a web server.<br/>
+<br/>
+we can use multiple auxiliary modules to enumerate information as well as perform brute-force attacks on targets running an FTP server<br/>
+<br/>
+FTP authentiation utilizes a username and password combination however in some cases improperly configured FTP server can be logged into anonymously<br/>
+<br/>
+Brute force can be applied for breaking the username passwords.<br/>
+<br/>
+<br/>
+Lab working:<br/>
+<br/>
+service postgresql start<br/>
+<br/>
+msfconsole<br/>
+<br/>
+serch the auxiliary modules for ftp<br/>
+<br/>
+search type name:ftp<br/>
+<br/>
+use auxiliary/scanner/ftp/ftp_version<br/>
+<br/>
+set RHOSTS<br/>
+<br/>
+show options make sure the RHOSTS are there<br/>
+<br/>
+hit run <br/>
+<br/>
+Banner is exposed<br/>
+<br/>
+now search the proFTPD<br/>
+<br/>
+go back<br/>
+<br/>
+use auxiliary/scanner/ftp/ftp_login<br/>
+<br/>
+show options<br/>
+<br/>
+this has options to add the User_File and Pass_File from the default paths<br/>
+<br/>
+set both the files and the RHOSTS<br/>
+<br/>
+run it will brute force the files and it will show in green the files that are found<br/>
+<br/>
+now make sure it is logged in<br/>
+<br/>
+ftp &lt;target ip address&gt;<br/>
+<br/>
+if it is not overwhelmed it will be logged in from the passwords that were brute forced<br/>
+<br/>
+<br/>
+</body></html>
