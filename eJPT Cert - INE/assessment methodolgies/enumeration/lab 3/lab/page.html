@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Lab</title>
+</head><body>Lab Environment <br/>
+A Linux machine is accessible at <b>target.ine.local</b>. Identify the services running on the machine and capture the flags. The flag is an md5 hash format.<br/>
+&nbsp;<ul><li>&nbsp;<b>Flag 1:</b>&nbsp;There is a samba share that allows anonymous access. Wonder what's in there!</li>
+<li><b>Flag 2:</b>&nbsp;One of the samba users have a bad password. Their private share with the same name as their username is at risk!</li>
+<li><b>Flag 3:</b>&nbsp;Follow the hint given in the previous flag to uncover this one.</li>
+<li><b>Flag 4:</b>&nbsp;This is a warning meant to deter unauthorized users from logging in.</li>
+</ul>
+<br/>
+<b>Note:</b>&nbsp;The wordlists located in the following directory will be useful:<br/>
+&nbsp;<ul><li>&nbsp;/root/Desktop/wordlists</li>
+</ul>
+Tools <ul><li>&nbsp;Nmap</li>
+<li>Metasploit</li>
+<li>Hydra</li>
+<li>enum4linux</li>
+<li>smbclient</li>
+<li>smbmap</li>
+</ul>
+&nbsp;<br/>
+============================================================ Solutions ===============================<br/>
+<br/>
+https://infosecwriteups.com/walkthrough-assessment-methodologies-enumeration-ctf-1-90df505c3db5<br/>
+<br/>
+there is a change in here that there is not user.txt<br/>
+<br/>
+so we will change that we will use hydra for the retrieval of the users like ashley, alice etc<br/>
+<br/>
+Alice has Pretty password so we got it from Hydra<br/>
+<br/>
+then we can login the FTP server<br/>
+</body></html>

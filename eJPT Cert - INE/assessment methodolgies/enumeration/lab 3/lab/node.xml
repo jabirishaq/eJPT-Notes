@@ -2,12 +2,12 @@
 <node>
 <version>6</version>
 <dict>
-  <key>title</key><string>SMTP Enumeration</string>
-  <key>nodeid</key><string>77bf4ded-52b6-4285-b926-1a060c78aff7</string>
-  <key>modified_time</key><integer>1756821459</integer>
+  <key>title</key><string>Lab</string>
+  <key>nodeid</key><string>3e030b71-cf6b-4e0d-8158-1bee82febdca</string>
+  <key>modified_time</key><integer>1756880912</integer>
   <key>version</key><integer>6</integer>
   <key>content_type</key><string>text/xhtml+xml</string>
-  <key>created_time</key><integer>1756820986</integer>
+  <key>created_time</key><integer>1756880761</integer>
   <key>info_sort_dir</key><integer>1</integer>
   <key>order</key><integer>0</integer>
   <key>info_sort</key><string>order</string>
